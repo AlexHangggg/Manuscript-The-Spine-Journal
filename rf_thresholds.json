@@ -1,0 +1,6 @@
+{
+  "threshold_Youden": 0.5256270118770119,
+  "threshold_Sens90": 0.47458784271284293,
+  "threshold_MaxF1": 0.5159321234321236,
+  "threshold_Chosen": 0.5256270118770119
+}

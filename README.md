@@ -28,8 +28,8 @@ We developed a machine learning pipeline to predict spontaneous reabsorption of 
 │   ├── 3_Gender_difference_analysis_bidirectional.py
 │   │                                            # Bidirectional sex-stratified analysis
 │   ├── 4_app.py                                 # Streamlit web calculator
-│   ├── 6_IPTW_WEIGHTED_LOGISTIC.R               # Causal inference: IPTW analysis
-│   ├── 6_IPTW_WEIGHTED_LOGISTIC_bidirectional.R # Bidirectional IPTW analysis
+│   ├── 5_IPTW_WEIGHTED_LOGISTIC.R               # Causal inference: IPTW analysis
+│   ├── 5_IPTW_WEIGHTED_LOGISTIC_bidirectional.R # Bidirectional IPTW analysis
 │   ├── manuscript_ml_upgrade_core.py            # ML engine (models, training, evaluation)
 │   ├── manuscript_ml_upgrade_explain.py         # SHAP explainability module
 │   ├── Streamlit.bat                            # Streamlit launcher (Windows)
@@ -48,7 +48,7 @@ We developed a machine learning pipeline to predict spontaneous reabsorption of 
 ### Prerequisites
 
 - **Python 3.12+** (tested with 3.12.10)
-- **R 4.x** (for scripts 1, 5, 6)
+- **R 4.x** (for scripts 1, 5)
 - **GPU** (optional): NVIDIA GPU with CUDA 12.x for accelerated training
 
 ### Installation
@@ -99,7 +99,7 @@ python 3_Gender_difference_analysis.py
 streamlit run 4_app.py
 
 # Step 5: IPTW causal inference (R)
-Rscript 6_IPTW_WEIGHTED_LOGISTIC.R
+Rscript 5_IPTW_WEIGHTED_LOGISTIC.R
 ```
 
 ## Models Evaluated

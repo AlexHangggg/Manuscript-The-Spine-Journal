@@ -1,6 +1,6 @@
 # Machine Learning-Based Prediction and Causal Evaluation of Spontaneous Reabsorption in Lumbar Disc Herniation
 
-This repository contains the code and results for the manuscript submitted to *The Spine Journal*.
+This repository contains the source code for the manuscript submitted to *The Spine Journal*.
 
 ## Overview
 
@@ -19,37 +19,30 @@ We developed a machine learning pipeline to predict spontaneous reabsorption of 
 
 ```
 .
-├── 代码/                          # Source code (all scripts)
-│   ├── 1_double_entry_consistency_check.R     # Data quality: double entry validation
-│   ├── 2_Data_analysis_...py                  # Main pipeline: statistics + ML + SHAP
-│   ├── 2a_Bull_eye_sensitivity_analysis.py    # Sensitivity analysis: Bull_eye masking
-│   ├── 3_Gender_difference_analysis.py        # Sex-stratified subgroup analysis
-│   ├── 4_app.py                               # Streamlit web calculator
-│   ├── 5_lmm_vas_odi_joa_analysis.R           # Linear mixed model: VAS/ODI/JOA
-│   ├── 6_IPTW_WEIGHTED_LOGISTIC.R             # Causal inference: IPTW analysis
-│   ├── manuscript_ml_upgrade_core.py          # ML engine (models, training, evaluation)
-│   └── manuscript_ml_upgrade_explain.py       # SHAP explainability module
+├── 代码/                                        # Source code
+│   ├── 1_double_entry_consistency_check.R       # Data quality: double-entry validation
+│   ├── 2_Data_analysis___Model_construction___SHAP_analysis.py
+│   │                                            # Main pipeline: statistics + ML + SHAP
+│   ├── 2a_Bull_eye_sensitivity_analysis.py      # Sensitivity analysis: Bull_eye masking
+│   ├── 3_Gender_difference_analysis.py          # Sex-stratified subgroup analysis
+│   ├── 3_Gender_difference_analysis_bidirectional.py
+│   │                                            # Bidirectional sex-stratified analysis
+│   ├── 4_app.py                                 # Streamlit web calculator
+│   ├── 5_lmm_vas_odi_joa_analysis.R             # Linear mixed model: VAS/ODI/JOA
+│   ├── 6_IPTW_WEIGHTED_LOGISTIC.R               # Causal inference: IPTW analysis
+│   ├── 6_IPTW_WEIGHTED_LOGISTIC_bidirectional.R # Bidirectional IPTW analysis
+│   ├── manuscript_ml_upgrade_core.py            # ML engine (models, training, evaluation)
+│   ├── manuscript_ml_upgrade_explain.py         # SHAP explainability module
+│   ├── Streamlit.bat                            # Streamlit launcher (Windows)
+│   └── Streamlit.ps1                            # Streamlit launcher (PowerShell)
 │
-├── Results/                       # Output from latest run
-│   └── Manuscript_v2/
-│       └── run_20260402_092359/
-│           ├── 01_Descriptive/
-│           ├── 02_Correlation/
-│           ├── 03_Univariate/
-│           ├── 04_ML_ModelDevelopment/
-│           ├── 05_SHAP/
-│           ├── 06_Calculator_Deployment/
-│           └── 07_Sensitivity_Analysis_BullEye/
-│
-├── TSJ_Submission/                # Journal submission materials
-│   ├── Manuscript/
-│   ├── Figures/
-│   ├── Tables/
-│   └── Supplementary/
-│
-├── requirements.txt               # Python dependencies
+├── .gitignore
+├── requirements.txt                 # Python dependencies (CPU)
+├── requirements-py312-gpu.txt       # Python dependencies (GPU, CUDA 12.x)
 └── README.md
 ```
+
+> **Note:** Raw patient data (`文件/`), model output (`Results/`), and journal submission materials (`TSJ_Submission/`) are excluded from this repository. Results are generated automatically by running the pipeline. Data is available from the corresponding author upon reasonable request.
 
 ## Getting Started
 
@@ -71,20 +64,20 @@ python -m venv .venv
 source .venv/bin/activate  # Linux/Mac
 # .venv\Scripts\activate   # Windows
 
-# Install dependencies
+# Install dependencies (CPU)
 pip install -r requirements.txt
 
-# Optional: GPU support (NVIDIA CUDA 12.x)
-pip install torch --index-url https://download.pytorch.org/whl/cu128
+# Or install with GPU support (NVIDIA CUDA 12.x)
+pip install -r requirements-py312-gpu.txt
 ```
 
 ### Data
 
-Patient-level data is not included in this repository due to privacy regulations. Data is available from the corresponding author upon reasonable request.
-
-**Expected data files** (place in `文件/` directory):
+**Expected data files** (place in `文件/` directory at the project root):
 - `Retrospective data.xlsx` — Retrospective cohort (n=608), sheet: "Train"
 - `Prospective data.xlsx` — Prospective cohort (n=56), sheet: "Train_Pors"
+
+All results will be generated under `Results/` automatically when running the scripts.
 
 ### Running the Pipeline
 

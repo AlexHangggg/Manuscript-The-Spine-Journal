@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv*/
+*.egg-info/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+.r_libs/
+
+# Model cache (large files)
+TabPFNModels/
+代码/TabPFNModels/
+catboost_info/
+代码/catboost_info/
+
+# IDE / Editor
+.vscode/
+代码/.vscode/
+.idea/
+*.swp
+*.swo
+~$*.docx
+
+# Claude / AI tools
+.claude/
+.codex_run_logs/
+
+# Temp files
+tmp/
+
+# Raw patient data (privacy)
+文件/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Large diagnostic TIFF images
+*.tiff
+
+# TSJ Submission package (journal-only, not for GitHub)
+TSJ_Submission/
+
+# Manuscript docx (too large for GitHub)
+*.docx
+
+# Node modules
+node_modules/
+
+# Large result archives (keep only latest)
+# Results are tracked selectively

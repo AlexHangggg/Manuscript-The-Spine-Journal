@@ -1,0 +1,158 @@
+{
+  "name": "AdaBoost",
+  "family": "traditional",
+  "status": "completed",
+  "oof_metrics": {
+    "Sensitivity": 0.24858757062146894,
+    "Specificity": 0.9651972157772621,
+    "Accuracy": 0.756578947368421,
+    "PPV": 0.7457627118644068,
+    "NPV": 0.7577413479052824,
+    "F1": 0.3728813559322034,
+    "Youden": 0.213784786398731,
+    "AUC": 0.7258051830587124,
+    "AUPRC": 0.566003731689412,
+    "TN": 416,
+    "FP": 15,
+    "FN": 133,
+    "TP": 44
+  },
+  "ranking_oof_metrics": {
+    "Sensitivity": 0.6045197740112994,
+    "Specificity": 0.765661252900232,
+    "Accuracy": 0.71875,
+    "PPV": 0.5144230769230769,
+    "NPV": 0.825,
+    "F1": 0.5558441558441558,
+    "Youden": 0.3701810269115313,
+    "AUC": 0.7258051830587124,
+    "AUPRC": 0.566003731689412,
+    "TN": 330,
+    "FP": 101,
+    "FN": 70,
+    "TP": 107
+  },
+  "oof_threshold_bundle": {
+    "threshold_source": "oof",
+    "threshold_Youden": 0.316135336625313,
+    "threshold_Sens90": 0.16544202763206392,
+    "threshold_Spec90": 0.4017444181552751,
+    "threshold_MaxF1": 0.316135336625313,
+    "threshold_Chosen": 0.316135336625313,
+    "threshold_low": 0.16544202763206392,
+    "threshold_high": 0.4017444181552751,
+    "SENS_TARGET": 0.9,
+    "SPEC_TARGET": 0.9,
+    "metrics_Youden": {
+      "threshold": 0.316135336625313,
+      "Sensitivity": 0.6045197740112994,
+      "Specificity": 0.765661252900232,
+      "Accuracy": 0.71875,
+      "PPV": 0.5144230769230769,
+      "NPV": 0.825,
+      "F1": 0.5558441558441558,
+      "Youden": 0.3701810269115313
+    },
+    "metrics_Sens90": {
+      "threshold": 0.16544202763206392,
+      "Sensitivity": 0.903954802259887,
+      "Specificity": 0.2529002320185615,
+      "Accuracy": 0.44243421052631576,
+      "PPV": 0.33195020746887965,
+      "NPV": 0.8650793650793651,
+      "F1": 0.48558421851289835,
+      "Youden": 0.1568550342784485
+    },
+    "metrics_Spec90": {
+      "threshold": 0.4017444181552751,
+      "Sensitivity": 0.384180790960452,
+      "Specificity": 0.9002320185614849,
+      "Accuracy": 0.75,
+      "PPV": 0.6126126126126126,
+      "NPV": 0.7806841046277666,
+      "F1": 0.4722222222222222,
+      "Youden": 0.2844128095219369
+    },
+    "metrics_MaxF1": {
+      "threshold": 0.316135336625313,
+      "Sensitivity": 0.6045197740112994,
+      "Specificity": 0.765661252900232,
+      "Accuracy": 0.71875,
+      "PPV": 0.5144230769230769,
+      "NPV": 0.825,
+      "F1": 0.5558441558441558,
+      "Youden": 0.3701810269115313
+    },
+    "metrics_low": {
+      "threshold": 0.16544202763206392,
+      "Sensitivity": 0.903954802259887,
+      "Specificity": 0.2529002320185615,
+      "Accuracy": 0.44243421052631576,
+      "PPV": 0.33195020746887965,
+      "NPV": 0.8650793650793651,
+      "F1": 0.48558421851289835,
+      "Youden": 0.1568550342784485
+    },
+    "metrics_high": {
+      "threshold": 0.4017444181552751,
+      "Sensitivity": 0.384180790960452,
+      "Specificity": 0.9002320185614849,
+      "Accuracy": 0.75,
+      "PPV": 0.6126126126126126,
+      "NPV": 0.7806841046277666,
+      "F1": 0.4722222222222222,
+      "Youden": 0.2844128095219369
+    }
+  },
+  "ranking_threshold_label": "Youden",
+  "ranking_threshold": 0.316135336625313,
+  "external_metrics": {
+    "Sensitivity": 0.5588235294117647,
+    "Specificity": 0.9545454545454546,
+    "Accuracy": 0.7142857142857143,
+    "PPV": 0.95,
+    "NPV": 0.5833333333333334,
+    "F1": 0.7037037037037037,
+    "Youden": 0.5133689839572193,
+    "AUC": 0.8917112299465241,
+    "AUPRC": 0.9328601705686668,
+    "TN": 21,
+    "FP": 1,
+    "FN": 15,
+    "TP": 19
+  },
+  "probability_type": "predict_proba",
+  "training_log": {
+    "fold_logs": [
+      {
+        "fold": 1,
+        "n_train": 405,
+        "n_val": 203,
+        "search_type": "fixed_best_estimator_single_cv"
+      },
+      {
+        "fold": 2,
+        "n_train": 405,
+        "n_val": 203,
+        "search_type": "fixed_best_estimator_single_cv"
+      },
+      {
+        "fold": 3,
+        "n_train": 406,
+        "n_val": 202,
+        "search_type": "fixed_best_estimator_single_cv"
+      }
+    ],
+    "selection_fit": {
+      "search_type": "BayesSearchCV",
+      "best_params": {
+        "model__learning_rate": 0.028758748408760425,
+        "model__n_estimators": 200
+      },
+      "best_score": 0.7279023942159535,
+      "cv_folds": 3
+    },
+    "validation_mode": "single_cv_external",
+    "bull_eye_strategy": "shared_fold_preimpute"
+  }
+}

@@ -1,0 +1,487 @@
+{
+  "name": "LDA+TabPFN Voting",
+  "family": "ensemble_voting",
+  "status": "completed",
+  "oof_metrics": {
+    "Sensitivity": 0.4971751412429379,
+    "Specificity": 0.8538283062645011,
+    "Accuracy": 0.75,
+    "PPV": 0.5827814569536424,
+    "NPV": 0.8052516411378556,
+    "F1": 0.5365853658536586,
+    "Youden": 0.35100344750743906,
+    "AUC": 0.7267293247866609,
+    "AUPRC": 0.5888249618634074,
+    "TN": 368,
+    "FP": 63,
+    "FN": 89,
+    "TP": 88
+  },
+  "ranking_oof_metrics": {
+    "Sensitivity": 0.536723163841808,
+    "Specificity": 0.8468677494199536,
+    "Accuracy": 0.756578947368421,
+    "PPV": 0.5900621118012422,
+    "NPV": 0.8165548098434005,
+    "F1": 0.5621301775147929,
+    "Youden": 0.38359091326176165,
+    "AUC": 0.7267293247866609,
+    "AUPRC": 0.5888249618634074,
+    "TN": 365,
+    "FP": 66,
+    "FN": 82,
+    "TP": 95
+  },
+  "oof_threshold_bundle": {
+    "threshold_source": "oof",
+    "threshold_Youden": 0.46903656667475935,
+    "threshold_Sens90": 0.05557337422820934,
+    "threshold_Spec90": 0.6267389690162409,
+    "threshold_MaxF1": 0.46903656667475935,
+    "threshold_Chosen": 0.46903656667475935,
+    "threshold_low": 0.05557337422820934,
+    "threshold_high": 0.6267389690162409,
+    "SENS_TARGET": 0.9,
+    "SPEC_TARGET": 0.9,
+    "metrics_Youden": {
+      "threshold": 0.46903656667475935,
+      "Sensitivity": 0.536723163841808,
+      "Specificity": 0.8468677494199536,
+      "Accuracy": 0.756578947368421,
+      "PPV": 0.5900621118012422,
+      "NPV": 0.8165548098434005,
+      "F1": 0.5621301775147929,
+      "Youden": 0.38359091326176165
+    },
+    "metrics_Sens90": {
+      "threshold": 0.05557337422820934,
+      "Sensitivity": 0.903954802259887,
+      "Specificity": 0.2088167053364269,
+      "Accuracy": 0.41118421052631576,
+      "PPV": 0.3193612774451098,
+      "NPV": 0.8411214953271028,
+      "F1": 0.471976401179941,
+      "Youden": 0.11277150759631382
+    },
+    "metrics_Spec90": {
+      "threshold": 0.6267389690162409,
+      "Sensitivity": 0.4350282485875706,
+      "Specificity": 0.9002320185614849,
+      "Accuracy": 0.7648026315789473,
+      "PPV": 0.6416666666666667,
+      "NPV": 0.7950819672131147,
+      "F1": 0.5185185185185185,
+      "Youden": 0.33526026714905566
+    },
+    "metrics_MaxF1": {
+      "threshold": 0.46903656667475935,
+      "Sensitivity": 0.536723163841808,
+      "Specificity": 0.8468677494199536,
+      "Accuracy": 0.756578947368421,
+      "PPV": 0.5900621118012422,
+      "NPV": 0.8165548098434005,
+      "F1": 0.5621301775147929,
+      "Youden": 0.38359091326176165
+    },
+    "metrics_low": {
+      "threshold": 0.05557337422820934,
+      "Sensitivity": 0.903954802259887,
+      "Specificity": 0.2088167053364269,
+      "Accuracy": 0.41118421052631576,
+      "PPV": 0.3193612774451098,
+      "NPV": 0.8411214953271028,
+      "F1": 0.471976401179941,
+      "Youden": 0.11277150759631382
+    },
+    "metrics_high": {
+      "threshold": 0.6267389690162409,
+      "Sensitivity": 0.4350282485875706,
+      "Specificity": 0.9002320185614849,
+      "Accuracy": 0.7648026315789473,
+      "PPV": 0.6416666666666667,
+      "NPV": 0.7950819672131147,
+      "F1": 0.5185185185185185,
+      "Youden": 0.33526026714905566
+    }
+  },
+  "ranking_threshold_label": "Youden",
+  "ranking_threshold": 0.46903656667475935,
+  "external_metrics": {
+    "Sensitivity": 0.9117647058823529,
+    "Specificity": 0.7727272727272727,
+    "Accuracy": 0.8571428571428571,
+    "PPV": 0.8611111111111112,
+    "NPV": 0.85,
+    "F1": 0.8857142857142857,
+    "Youden": 0.6844919786096257,
+    "AUC": 0.9144385026737968,
+    "AUPRC": 0.9435175520880611,
+    "TN": 17,
+    "FP": 5,
+    "FN": 3,
+    "TP": 31
+  },
+  "probability_type": "predict_proba",
+  "training_log": {
+    "base_models": [
+      "LDA",
+      "TabPFN"
+    ],
+    "weights": {
+      "LDA": 0.53,
+      "TabPFN": 0.47
+    },
+    "weight_search": [
+      {
+        "w_lda": 0.5,
+        "composite": 0.671329,
+        "sens": 0.5367,
+        "threshold_label": "Youden",
+        "threshold": 0.462959
+      },
+      {
+        "w_lda": 0.51,
+        "composite": 0.671357,
+        "sens": 0.5367,
+        "threshold_label": "Youden",
+        "threshold": 0.464985
+      },
+      {
+        "w_lda": 0.52,
+        "composite": 0.671422,
+        "sens": 0.5367,
+        "threshold_label": "Youden",
+        "threshold": 0.467011
+      },
+      {
+        "w_lda": 0.53,
+        "composite": 0.671506,
+        "sens": 0.5367,
+        "threshold_label": "Youden",
+        "threshold": 0.469037
+      },
+      {
+        "w_lda": 0.54,
+        "composite": 0.670414,
+        "sens": 0.5367,
+        "threshold_label": "Youden",
+        "threshold": 0.471063
+      },
+      {
+        "w_lda": 0.55,
+        "composite": 0.661368,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.359094
+      },
+      {
+        "w_lda": 0.56,
+        "composite": 0.661409,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.360485
+      },
+      {
+        "w_lda": 0.57,
+        "composite": 0.661351,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.361877
+      },
+      {
+        "w_lda": 0.58,
+        "composite": 0.661389,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.363269
+      },
+      {
+        "w_lda": 0.59,
+        "composite": 0.661421,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.364661
+      },
+      {
+        "w_lda": 0.6,
+        "composite": 0.661489,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.366053
+      },
+      {
+        "w_lda": 0.61,
+        "composite": 0.661549,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.367445
+      },
+      {
+        "w_lda": 0.62,
+        "composite": 0.661667,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.368837
+      },
+      {
+        "w_lda": 0.63,
+        "composite": 0.661641,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.370229
+      },
+      {
+        "w_lda": 0.64,
+        "composite": 0.661676,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.371621
+      },
+      {
+        "w_lda": 0.65,
+        "composite": 0.66174,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.372515
+      },
+      {
+        "w_lda": 0.66,
+        "composite": 0.66178,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.373108
+      },
+      {
+        "w_lda": 0.67,
+        "composite": 0.661817,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.3737
+      },
+      {
+        "w_lda": 0.68,
+        "composite": 0.661847,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.374293
+      },
+      {
+        "w_lda": 0.69,
+        "composite": 0.661875,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.374886
+      },
+      {
+        "w_lda": 0.7,
+        "composite": 0.66189,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.375479
+      },
+      {
+        "w_lda": 0.71,
+        "composite": 0.661948,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.376072
+      },
+      {
+        "w_lda": 0.72,
+        "composite": 0.662021,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.376664
+      },
+      {
+        "w_lda": 0.73,
+        "composite": 0.661991,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.377257
+      },
+      {
+        "w_lda": 0.74,
+        "composite": 0.662051,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.37785
+      },
+      {
+        "w_lda": 0.75,
+        "composite": 0.662134,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.378443
+      },
+      {
+        "w_lda": 0.76,
+        "composite": 0.662223,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.379035
+      },
+      {
+        "w_lda": 0.77,
+        "composite": 0.662249,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.379628
+      },
+      {
+        "w_lda": 0.78,
+        "composite": 0.662283,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.380221
+      },
+      {
+        "w_lda": 0.79,
+        "composite": 0.662375,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.380814
+      },
+      {
+        "w_lda": 0.8,
+        "composite": 0.662376,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.381407
+      },
+      {
+        "w_lda": 0.81,
+        "composite": 0.662464,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.381999
+      },
+      {
+        "w_lda": 0.82,
+        "composite": 0.662483,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.382592
+      },
+      {
+        "w_lda": 0.83,
+        "composite": 0.662438,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.383185
+      },
+      {
+        "w_lda": 0.84,
+        "composite": 0.662553,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.383778
+      },
+      {
+        "w_lda": 0.85,
+        "composite": 0.662639,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.38437
+      },
+      {
+        "w_lda": 0.86,
+        "composite": 0.662703,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.384963
+      },
+      {
+        "w_lda": 0.87,
+        "composite": 0.662903,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.385556
+      },
+      {
+        "w_lda": 0.88,
+        "composite": 0.662894,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.386149
+      },
+      {
+        "w_lda": 0.89,
+        "composite": 0.662885,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.386742
+      },
+      {
+        "w_lda": 0.9,
+        "composite": 0.662972,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.387334
+      },
+      {
+        "w_lda": 0.91,
+        "composite": 0.663103,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.387927
+      },
+      {
+        "w_lda": 0.92,
+        "composite": 0.663093,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.38852
+      },
+      {
+        "w_lda": 0.93,
+        "composite": 0.66315,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.389113
+      },
+      {
+        "w_lda": 0.94,
+        "composite": 0.663163,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.389705
+      },
+      {
+        "w_lda": 0.95,
+        "composite": 0.663193,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.390298
+      },
+      {
+        "w_lda": 0.96,
+        "composite": 0.663106,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.390891
+      },
+      {
+        "w_lda": 0.97,
+        "composite": 0.663069,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.391484
+      },
+      {
+        "w_lda": 0.98,
+        "composite": 0.662975,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.392076
+      },
+      {
+        "w_lda": 0.99,
+        "composite": 0.661841,
+        "sens": 0.5819,
+        "threshold_label": "Youden",
+        "threshold": 0.392669
+      }
+    ]
+  }
+}

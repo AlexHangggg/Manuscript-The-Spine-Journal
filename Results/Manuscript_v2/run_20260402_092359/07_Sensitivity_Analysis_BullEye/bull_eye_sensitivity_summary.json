@@ -1,0 +1,96 @@
+{
+  "analysis": "Bull_eye sensitivity analysis",
+  "timestamp": "2026-04-06T00:39:36.612132",
+  "champion_model": "best_model_pipeline_lda+tabpfn_voting.pkl",
+  "run_dir": "run_20260402_092359",
+  "data_completeness": {
+    "retrospective": {
+      "n": 608,
+      "bull_eye_present": 161,
+      "bull_eye_missing": 447,
+      "completion_rate": 0.2648
+    },
+    "prospective": {
+      "n": 56,
+      "bull_eye_present": 47,
+      "bull_eye_missing": 9,
+      "completion_rate": 0.8393
+    }
+  },
+  "external_validation": {
+    "baseline_real_bull_eye": {
+      "AUC": 0.9144,
+      "AUPRC": 0.9435,
+      "Sensitivity": 0.9118,
+      "Specificity": 0.7727,
+      "PPV": 0.8611,
+      "NPV": 0.85,
+      "F1": 0.8857,
+      "Youden": 0.6845,
+      "Accuracy": 0.8571
+    },
+    "masked_imputed_bull_eye": {
+      "AUC": 0.9131,
+      "AUPRC": 0.9429,
+      "Sensitivity": 0.9118,
+      "Specificity": 0.7727,
+      "PPV": 0.8611,
+      "NPV": 0.85,
+      "F1": 0.8857,
+      "Youden": 0.6845,
+      "Accuracy": 0.8571
+    }
+  },
+  "internal_subgroup": {
+    "bull_eye_present": {
+      "n": 161,
+      "metrics": {
+        "AUC": 0.7217,
+        "AUPRC": 0.8211,
+        "Sensitivity": 0.7041,
+        "Specificity": 0.5714,
+        "PPV": 0.7188,
+        "NPV": 0.5538,
+        "F1": 0.7113,
+        "Youden": 0.2755,
+        "Accuracy": 0.6522
+      }
+    },
+    "bull_eye_missing": {
+      "n": 447,
+      "metrics": {
+        "AUC": 0.5896,
+        "AUPRC": 0.2631,
+        "Sensitivity": 0.2405,
+        "Specificity": 0.9022,
+        "PPV": 0.3455,
+        "NPV": 0.8469,
+        "F1": 0.2836,
+        "Youden": 0.1427,
+        "Accuracy": 0.7852
+      }
+    },
+    "positive_rate": {
+      "present": 0.6087,
+      "missing": 0.1767,
+      "fisher_p": 0.0
+    },
+    "confounders_detected": [
+      "Age",
+      "SS",
+      "Upper_VB_Posterior_Height_CM",
+      "Lower_VB_Posterior_Height_CM",
+      "Initial_volume",
+      "RSI",
+      "Gender",
+      "Herniated_Level",
+      "Pfirrmann",
+      "Iwabuchi",
+      "Modic",
+      "Komori",
+      "MSU",
+      "Spinal_canal_stenosis",
+      "Reabsorption"
+    ]
+  }
+}

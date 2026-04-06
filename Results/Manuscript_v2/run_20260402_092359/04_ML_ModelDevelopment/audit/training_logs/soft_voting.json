@@ -1,0 +1,143 @@
+{
+  "name": "Soft Voting",
+  "family": "ensemble_voting",
+  "status": "completed",
+  "oof_metrics": {
+    "Sensitivity": 0.2711864406779661,
+    "Specificity": 0.962877030162413,
+    "Accuracy": 0.7615131578947368,
+    "PPV": 0.75,
+    "NPV": 0.7628676470588235,
+    "F1": 0.3983402489626556,
+    "Youden": 0.23406347084037904,
+    "AUC": 0.7227705900087826,
+    "AUPRC": 0.5809817972867746,
+    "TN": 415,
+    "FP": 16,
+    "FN": 129,
+    "TP": 48
+  },
+  "ranking_oof_metrics": {
+    "Sensitivity": 0.5028248587570622,
+    "Specificity": 0.8631090487238979,
+    "Accuracy": 0.7582236842105263,
+    "PPV": 0.6013513513513513,
+    "NPV": 0.808695652173913,
+    "F1": 0.5476923076923077,
+    "Youden": 0.3659339074809602,
+    "AUC": 0.7227705900087826,
+    "AUPRC": 0.5809817972867746,
+    "TN": 372,
+    "FP": 59,
+    "FN": 88,
+    "TP": 89
+  },
+  "oof_threshold_bundle": {
+    "threshold_source": "oof",
+    "threshold_Youden": 0.36367999359429604,
+    "threshold_Sens90": 0.17728930071225327,
+    "threshold_Spec90": 0.4136018850219169,
+    "threshold_MaxF1": 0.27208593081573657,
+    "threshold_Chosen": 0.36367999359429604,
+    "threshold_low": 0.17728930071225327,
+    "threshold_high": 0.4136018850219169,
+    "SENS_TARGET": 0.9,
+    "SPEC_TARGET": 0.9,
+    "metrics_Youden": {
+      "threshold": 0.36367999359429604,
+      "Sensitivity": 0.5028248587570622,
+      "Specificity": 0.8631090487238979,
+      "Accuracy": 0.7582236842105263,
+      "PPV": 0.6013513513513513,
+      "NPV": 0.808695652173913,
+      "F1": 0.5476923076923077,
+      "Youden": 0.3659339074809602
+    },
+    "metrics_Sens90": {
+      "threshold": 0.17728930071225327,
+      "Sensitivity": 0.903954802259887,
+      "Specificity": 0.23433874709976799,
+      "Accuracy": 0.4292763157894737,
+      "PPV": 0.32653061224489793,
+      "NPV": 0.8559322033898306,
+      "F1": 0.47976011994003,
+      "Youden": 0.1382935493596551
+    },
+    "metrics_Spec90": {
+      "threshold": 0.4136018850219169,
+      "Sensitivity": 0.4011299435028249,
+      "Specificity": 0.9048723897911833,
+      "Accuracy": 0.7582236842105263,
+      "PPV": 0.6339285714285714,
+      "NPV": 0.7862903225806451,
+      "F1": 0.4913494809688581,
+      "Youden": 0.3060023332940083
+    },
+    "metrics_MaxF1": {
+      "threshold": 0.27208593081573657,
+      "Sensitivity": 0.6384180790960452,
+      "Specificity": 0.7169373549883991,
+      "Accuracy": 0.694078947368421,
+      "PPV": 0.4808510638297872,
+      "NPV": 0.8284182305630027,
+      "F1": 0.5485436893203883,
+      "Youden": 0.35535543408444425
+    },
+    "metrics_low": {
+      "threshold": 0.17728930071225327,
+      "Sensitivity": 0.903954802259887,
+      "Specificity": 0.23433874709976799,
+      "Accuracy": 0.4292763157894737,
+      "PPV": 0.32653061224489793,
+      "NPV": 0.8559322033898306,
+      "F1": 0.47976011994003,
+      "Youden": 0.1382935493596551
+    },
+    "metrics_high": {
+      "threshold": 0.4136018850219169,
+      "Sensitivity": 0.4011299435028249,
+      "Specificity": 0.9048723897911833,
+      "Accuracy": 0.7582236842105263,
+      "PPV": 0.6339285714285714,
+      "NPV": 0.7862903225806451,
+      "F1": 0.4913494809688581,
+      "Youden": 0.3060023332940083
+    }
+  },
+  "ranking_threshold_label": "Youden",
+  "ranking_threshold": 0.36367999359429604,
+  "external_metrics": {
+    "Sensitivity": 0.5588235294117647,
+    "Specificity": 1.0,
+    "Accuracy": 0.7321428571428571,
+    "PPV": 1.0,
+    "NPV": 0.5945945945945946,
+    "F1": 0.7169811320754716,
+    "Youden": 0.5588235294117647,
+    "AUC": 0.9304812834224598,
+    "AUPRC": 0.9548838308281526,
+    "TN": 22,
+    "FP": 0,
+    "FN": 15,
+    "TP": 19
+  },
+  "probability_type": "predict_proba",
+  "training_log": {
+    "base_models": [
+      "Logistic Regression",
+      "Random Forest",
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+      "TabPFN"
+    ],
+    "weights": {
+      "Logistic Regression": 0.16912336326082647,
+      "Random Forest": 0.167391735134064,
+      "XGBoost": 0.16712650336112678,
+      "LightGBM": 0.16161151166867369,
+      "CatBoost": 0.16769355059982008,
+      "TabPFN": 0.1670533359754889
+    }
+  }
+}

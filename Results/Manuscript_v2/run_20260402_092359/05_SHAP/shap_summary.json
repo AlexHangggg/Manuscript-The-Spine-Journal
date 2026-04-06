@@ -1,0 +1,16 @@
+{
+  "champion_model": "LDA+TabPFN Voting",
+  "model_tag": "lda+tabpfn_voting",
+  "shap_method": "kernel",
+  "background_size": 40,
+  "explain_size": 24,
+  "artifacts": {
+    "shap_values": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\05_SHAP\\shap_values.csv",
+    "shap_source_features": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\05_SHAP\\shap_source_features.csv",
+    "shap_importance": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\05_SHAP\\shap_importance.csv",
+    "shap_bar_png": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\05_SHAP\\figures\\lda+tabpfn_voting_shap_bar.png",
+    "shap_bar_pdf": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\05_SHAP\\figures\\lda+tabpfn_voting_shap_bar.pdf",
+    "shap_beeswarm_png": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\05_SHAP\\figures\\lda+tabpfn_voting_shap_beeswarm.png",
+    "shap_beeswarm_pdf": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\05_SHAP\\figures\\lda+tabpfn_voting_shap_beeswarm.pdf"
+  }
+}

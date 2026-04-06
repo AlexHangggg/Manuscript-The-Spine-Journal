@@ -1,0 +1,10 @@
+﻿Metric,Baseline_RealBullEye,Masked_ImputedBullEye,Difference,Change_Percent
+AUC,0.9144,0.9131,-0.0013,-0.15
+AUPRC,0.9435,0.9429,-0.0006,-0.07
+Sensitivity,0.9118,0.9118,0.0,0.0
+Specificity,0.7727,0.7727,0.0,0.0
+PPV,0.8611,0.8611,0.0,0.0
+NPV,0.85,0.85,0.0,0.0
+F1,0.8857,0.8857,0.0,0.0
+Youden,0.6845,0.6845,0.0,0.0
+Accuracy,0.8571,0.8571,0.0,0.0

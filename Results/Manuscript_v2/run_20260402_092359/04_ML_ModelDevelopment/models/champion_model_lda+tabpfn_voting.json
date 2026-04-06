@@ -1,0 +1,6 @@
+{
+  "model_name": "LDA+TabPFN Voting",
+  "model_tag": "lda+tabpfn_voting",
+  "model_archive_path": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\04_ML_ModelDevelopment\\models\\champion_model_lda+tabpfn_voting.pkl",
+  "deploy_path": "E:\\TSJ投稿论文\\Results\\Manuscript_v2\\run_20260402_092359\\06_Calculator_Deployment\\exported_model\\best_model_pipeline_lda+tabpfn_voting.pkl"
+}

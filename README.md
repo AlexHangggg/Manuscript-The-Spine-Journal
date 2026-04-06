@@ -24,12 +24,10 @@ We developed a machine learning pipeline to predict spontaneous reabsorption of 
 │   ├── 2_Data_analysis___Model_construction___SHAP_analysis.py
 │   │                                            # Main pipeline: statistics + ML + SHAP
 │   ├── 2a_Bull_eye_sensitivity_analysis.py      # Sensitivity analysis: Bull_eye masking
-│   ├── 3_Gender_difference_analysis.py          # Sex-stratified subgroup analysis
 │   ├── 3_Gender_difference_analysis_bidirectional.py
-│   │                                            # Bidirectional sex-stratified analysis
+│   │                                            # Sex-stratified subgroup analysis (bidirectional)
 │   ├── 4_app.py                                 # Streamlit web calculator
-│   ├── 5_IPTW_WEIGHTED_LOGISTIC.R               # Causal inference: IPTW analysis
-│   ├── 5_IPTW_WEIGHTED_LOGISTIC_bidirectional.R # Bidirectional IPTW analysis
+│   ├── 5_IPTW_WEIGHTED_LOGISTIC_bidirectional.R # Causal inference: IPTW analysis (bidirectional)
 │   ├── manuscript_ml_upgrade_core.py            # ML engine (models, training, evaluation)
 │   ├── manuscript_ml_upgrade_explain.py         # SHAP explainability module
 │   ├── Streamlit.bat                            # Streamlit launcher (Windows)
@@ -92,14 +90,14 @@ python 2_Data_analysis___Model_construction___SHAP_analysis.py
 # Step 2a: Bull_eye sensitivity analysis
 python 2a_Bull_eye_sensitivity_analysis.py
 
-# Step 3: Sex-stratified analysis
-python 3_Gender_difference_analysis.py
+# Step 3: Sex-stratified analysis (bidirectional)
+python 3_Gender_difference_analysis_bidirectional.py
 
 # Step 4: Launch web calculator
 streamlit run 4_app.py
 
-# Step 5: IPTW causal inference (R)
-Rscript 5_IPTW_WEIGHTED_LOGISTIC.R
+# Step 5: IPTW causal inference (R, bidirectional)
+Rscript 5_IPTW_WEIGHTED_LOGISTIC_bidirectional.R
 ```
 
 ## Models Evaluated

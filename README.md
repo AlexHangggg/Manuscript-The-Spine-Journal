@@ -28,7 +28,6 @@ We developed a machine learning pipeline to predict spontaneous reabsorption of 
 │   ├── 3_Gender_difference_analysis_bidirectional.py
 │   │                                            # Bidirectional sex-stratified analysis
 │   ├── 4_app.py                                 # Streamlit web calculator
-│   ├── 5_lmm_vas_odi_joa_analysis.R             # Linear mixed model: VAS/ODI/JOA
 │   ├── 6_IPTW_WEIGHTED_LOGISTIC.R               # Causal inference: IPTW analysis
 │   ├── 6_IPTW_WEIGHTED_LOGISTIC_bidirectional.R # Bidirectional IPTW analysis
 │   ├── manuscript_ml_upgrade_core.py            # ML engine (models, training, evaluation)
@@ -99,10 +98,7 @@ python 3_Gender_difference_analysis.py
 # Step 4: Launch web calculator
 streamlit run 4_app.py
 
-# Step 5: Linear mixed model analysis (R)
-Rscript 5_lmm_vas_odi_joa_analysis.R
-
-# Step 6: IPTW causal inference (R)
+# Step 5: IPTW causal inference (R)
 Rscript 6_IPTW_WEIGHTED_LOGISTIC.R
 ```
 

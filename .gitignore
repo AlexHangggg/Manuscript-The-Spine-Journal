@@ -52,5 +52,5 @@ TSJ_Submission/
 # Node modules
 node_modules/
 
-# Large result archives (keep only latest)
-# Results are tracked selectively
+# Results (generated output, not for GitHub)
+Results/
